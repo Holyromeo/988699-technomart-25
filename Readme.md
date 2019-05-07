@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Raman Kastsiushkin](https://up.htmlacademy.ru/htmlcss/25/user/988699).
-* Наставник: [Дмитрий Вашкевич](https://up.htmlacademy.ru/htmlcss/25/user/116959).
+* Наставник: `Неизвестно`.
 
 ---
 
