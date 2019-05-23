@@ -49,7 +49,7 @@
 		  <li><a href="perforators.html">перфораторы</a></li>
         </ul>
 	    <h1>перфораторы</h1>
-	    <section class="filters">
+	    <section class="filter">
           <h2 class="filters">Фильтр:</h2>
           <!-- Здесь будет форма -->
 		  
@@ -58,26 +58,44 @@
 			  <legend>производители:</legend>
 		      <ul>
 			    <li>
-				  <input type="checkbox" name="BOSCH" id="BOSCH" checked>
+				  <input type="checkbox" name="BOSCH" id="filter-BOSCH" checked>
 			      <label for="filter-BOSCH">BOSCH</label>
 			    </li>
 				<li>
-				  <input type="checkbox" name="INTERSKOL" id="INTERSKOL">
+				  <input type="checkbox" name="INTERSKOL" id="filter-INTERSKOL">
 			      <label for="filter-INTERSKOL">ИНТЕРСКОЛ</label>
 			    </li>
 				<li>
-				  <input type="checkbox" name="MAKITA" id="MAKITA" checked>
+				  <input type="checkbox" name="MAKITA" id="filter-MAKITA" checked>
 			      <label for="filter-MAKITA">MAKITA</label>
 			    </li>
 				<li>
-				  <input type="checkbox" name="DEWALT" id="DEWALT">
+				  <input type="checkbox" name="DEWALT" id="filter-DEWALT">
 			      <label for="filter-DEWALT">DEWALT</label>
-			    </li><li>
-				  <input type="checkbox" name="HITACHI" id="HITACHI">
+			    </li>
+				<li>
+				  <input type="checkbox" name="HITACHI" id="filter-HITACHI">
 			      <label for="filter-HITACHI">HITACHI</label>
 			    </li>
 			  </ul>
 			</fieldset>
+			<fieldset>
+			  <ul>
+			    <li>
+				  <label>
+				    <input type="radio" name="type" value="accumulator" checked>
+					  АККУМУЛЯТОРНЫЕ
+				  </label>
+				</li>
+				<li>
+				  <label>
+				    <input type="radio" name="type" value="network">
+					  СЕТЕВЫЕ
+				  </label>
+				</li>
+			  </ul>
+			<fieldset>
+			<button type="submit">показать</button>
 		  </form>
         </section>
 	    <section class="catalog">
