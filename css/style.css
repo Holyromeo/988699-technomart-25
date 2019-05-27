@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+/*хедер*/
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.main-header {
+  width: 1200px;
+  height: 320px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  background-color: #f4f7f9;
+}
+
+.navigation {
+  height: 42px;
+  background-color: #293449;
+}
+
+.container-header a {
+  width: 220px;
+  height: 47px;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  background-color: #ee3643;
+}
+
+.container-header a:hover,
+.container-header a:focus {
+  background-color: #ca2c37;
+}
+
+.main-header-logo img {
+  width: 109px;
+  height: 19px;
+}
+
+.container-header p {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.container-header p:last-child {
+  width: 150px;
+  background-color: #63a63e;
+}
+
+.h1 {
+  width: 196px;
+  height: 60px;
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: #ee3643;
+  background-color: #f4f7f9;
+}
+
+.contacts .phone-number {
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+  background-color: #f4f7f9;
+  border: 3px solid #ffffff;
+}
+
+.contacts .address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+  background-color: #f4f7f9;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.user-navigation a {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.main-navigation .site-navigation {
+  width: 940px;
+  height: 60px; 
+  background-color: #32425c; 
+}
+
+.main-navigation .site-navigation a {
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  background-color: #32425c;
+}
+/*майн*/
+.about-company {
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.about-company h2,
+.contacts h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.about-company a,
+.contacts a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+/*футер*/
+
+.main-footer {
+  width: 1200px;
+  height: 300px;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #32425c;
+}
+
+.container-footer a  {
+  width: 220px;
+  height: 68px;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  background-color: #ee3643;
+}
+
+.container-footer img {
+  width: 138px;
+  height: 23px;
+}
+
+.site-navigation,
+.site-info {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: #f1f5f7;
+  background-color: #32425c;
+}
+
+.contacts-footer .phone-number,
+.contacts-footer .address {
+  color: #f3f7f9;
+  background-color: #32425c;
+}
+
+.site-info a {
+  color: #ffd180;
+  background-color: #32425c;
+}
+
+.bottom-footer {
+  width: 1200px;
+  height: 107px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.container p {
+  text-align: center;
+  color: #ffffff;
+}
+
+.social {
+  text-align: center;
+}
+
+.social {
+  list-style: none;
+}
+
+.social-button {
+  color: #ffffff;
+}
+
+.footer-feedback a,
+.footer-copyright a {
+  text-align: center;
+  color: #ffd180;
+}
