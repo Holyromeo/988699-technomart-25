@@ -2,45 +2,47 @@ body {
   margin: 0;
   padding: 0;
 
+  font-size: 18px;
+  line-height: 24px;
   font-family: "Cuprum", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 18px;
   font-weight: 400;
   color: #000000;
-  text-transform: uppercase;
-  
   background-color: #ffffff;
 }
 
 a {
   text-decoration: none;
 }
+
 /*хедер*/
-.site-navigation,
-.user-navigation {
-  list-style: none;
-}
+/* хедр верх */
 
 .main-header {
   width: 1200px;
-  height: 320px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-
+  min-height: 320px;
   background-color: #f4f7f9;
 }
 
 .navigation {
+  width: 1200px;
   height: 42px;
+  padding-top: 14px;
+  padding-left: 130px;
   background-color: #293449;
 }
+
+/* .container-header {
+  display: flex;
+} */
 
 .container-header a {
   width: 220px;
   height: 47px;
+  padding-top: 13px;
+  /* padding-left: 55px; */
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
+  display: block;
 }
 
 .container-header a:hover,
@@ -48,9 +50,8 @@ a {
   background-color: #ca2c37;
 }
 
-.main-header-logo img {
-  width: 109px;
-  height: 19px;
+.main-header-logo {
+  text-align: center;
 }
 
 .container-header p {
@@ -60,12 +61,20 @@ a {
   background-color: #293449;
 }
 
-.container-header p:last-child {
+.make-order-button {
   width: 150px;
+  height: 42px;
   background-color: #63a63e;
 }
 
-.h1 {
+.make-order-button:hover,
+.make-order-button:focus {
+  background-color: #5fbb2d;
+}
+
+/* хедер центр */
+
+h1 {
   width: 196px;
   height: 60px;
   font-size: 16px;
@@ -75,17 +84,26 @@ a {
   background-color: #f4f7f9;
 }
 
-.contacts .phone-number {
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.contacts-header .phone-number {
+  width: 264px;
+  height: 39px;
   font-size: 21px;
   line-height: 21px;
+  text-align: left;
   color: #ee3643;
   background-color: #f4f7f9;
   border: 3px solid #ffffff;
 }
 
-.contacts .address {
+.contacts-header .address {
   font-size: 14px;
   line-height: 24px;
+  text-align: center;
   color: #32425c;
   background-color: #f4f7f9;
 }
@@ -102,9 +120,13 @@ a {
   background-color: #ffffff;
 }
 
+/* хедер навигация */
+
 .main-navigation .site-navigation {
   width: 940px;
-  height: 60px; 
+  min-height: 60px;
+  margin: 0 auto;
+  box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c; 
 }
 
@@ -114,13 +136,9 @@ a {
   color: #ffffff;
   background-color: #32425c;
 }
+
 /*майн*/
-.about-company {
-  font-size: 13px;
-  line-height: 24px;
-  color: #000000;
-  background-color: #ffffff;
-}
+/* майн низ */
 
 .about-company h2,
 .contacts h2 {
@@ -136,24 +154,33 @@ a {
   background-color: #ee3643;
 }
 
+.about-company p,
+.contacts p {
+  font-family: "PT Sans Narrow";
+  font-size: 13px;
+  line-height: 24px;
+}
+
 /*футер*/
 
 .main-footer {
   width: 1200px;
   height: 300px;
-  font-size: 18px;
-  line-height: 24px;
+  font: inherit;
   background-color: #32425c;
 }
 
 .container-footer a  {
   width: 220px;
   height: 68px;
+  padding-top: 20px;
+  padding-left: 41px;
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
+  display: block;
 }
 
-.container-footer img {
+.main-footer-logo {
   width: 138px;
   height: 23px;
 }
@@ -189,12 +216,7 @@ a {
 }
 
 .container p {
-  text-align: center;
   color: #ffffff;
-}
-
-.social {
-  text-align: center;
 }
 
 .social {
@@ -207,6 +229,5 @@ a {
 
 .footer-feedback a,
 .footer-copyright a {
-  text-align: center;
   color: #ffd180;
 }
