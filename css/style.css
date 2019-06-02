@@ -4,7 +4,7 @@ body {
 
   font-size: 18px;
   line-height: 24px;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
@@ -14,56 +14,79 @@ a {
   text-decoration: none;
 }
 
+.inner-page {
+  margin: 0;
+  padding: 0;
+  
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
 /*хедер*/
 /* хедр верх */
 
 .main-header {
-  width: 1200px;
-  min-height: 320px;
   background-color: #f4f7f9;
 }
 
 .navigation {
-  width: 1200px;
-  height: 42px;
   padding-top: 14px;
   padding-left: 130px;
   background-color: #293449;
 }
 
-/* .container-header {
-  display: flex;
-} */
-
-.container-header a {
-  width: 220px;
-  height: 47px;
-  padding-top: 13px;
-  /* padding-left: 55px; */
+.main-header-logo {
+  padding: 13px 56px 15px 55px;
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
   display: block;
 }
 
-.container-header a:hover,
-.container-header a:focus {
+.main-header-logo:hover,
+.main-header-logo:focus {
   background-color: #ca2c37;
 }
 
-.main-header-logo {
-  text-align: center;
+.main-header-logo:active {
+  background-color: #ba2732;
 }
 
-.container-header p {
+.make-order p {
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
   background-color: #293449;
 }
 
+.make-order a {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.make-order a:hover,
+.make-order a:focus {
+  background-color: #212a3a;
+}
+
+.make-order a:active {
+  background-color: #161d29;
+  opacity: 0.6;
+}
+
 .make-order-button {
-  width: 150px;
-  height: 42px;
+  padding: 14px 22px 13px 20px;
   background-color: #63a63e;
 }
 
@@ -72,9 +95,14 @@ a {
   background-color: #5fbb2d;
 }
 
+.make-order-button:active {
+  background-color: #518534;
+  opacity: 0.5;
+}
+
 /* хедер центр */
 
-h1 {
+.site-title {
   width: 196px;
   height: 60px;
   font-size: 16px;
@@ -116,34 +144,108 @@ h1 {
 .user-navigation a {
   font-size: 21px;
   line-height: 21px;
+  padding: 14px 25px 11px 25px;
   color: #000000;
   background-color: #ffffff;
 }
 
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #ee3643;
+}
+
+.user-navigation a:active {
+  opacity: 0.3;
+}
+
+/* хедер каталога */
+
+.username {
+  font-size: 21px;
+  line-height: 21px;
+  padding: 14px 25px 11px 25px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.username p {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* .username p::before {
+  content: url(img/icon-user.svg);
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.username a:hover,
+.username a:focus {
+  color: #000000;
+  background-color: #ffffff;
+  opacity: 1;
+} */
+
+.user-id .button {
+  font: inherit;
+  text-align: center;
+  color: #32425c;
+  vertical-align: middle;
+  background-color: #f4f7f9;
+  text-decoration: underline;
+  border: none;
+}
+
+/* .user-id .button:hover,
+.user-id .button:focus {
+  color: #ee3643;
+  background-color: #f4f7f9;
+}
+
+.user-id p:active,
+.user-id a:active  {
+  opacity: 0.3;
+} */
+
 /* хедер навигация */
 
 .main-navigation .site-navigation {
-  width: 940px;
-  min-height: 60px;
-  margin: 0 auto;
   box-shadow: inset 0px -5px 0 0 #293449;
-  background-color: #32425c; 
+  background-color: #32425c;
+  /* padding-top: 22px;
+  padding-bottom: 26px;  
+  display: flex;
+  justify-content: space-around; */
 }
 
-.main-navigation .site-navigation a {
+.site-navigation a {
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
   background-color: #32425c;
 }
 
-/*майн*/
+.site-navigation a:hover,
+.site-navigation a:focus {
+  background-color: 293449; 
+}
+
+.site-navigation a:active {
+  opacity: 0.5;
+}
+
+.site-navigation a:active {
+	
+}
+
+/*майн главной*/
 /* майн низ */
 
 .about-company h2,
 .contacts h2 {
   font-size: 30px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .about-company a,
@@ -152,31 +254,73 @@ h1 {
   line-height: 18px;
   color: #ffffff;
   background-color: #ee3643;
+  text-transform: uppercase;
 }
 
 .about-company p,
 .contacts p {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
   background-color: #ffffff;
 }
 
+.about-company li {
+  font-size: 18px;
+  line-height: 20px;
+  /* list-style: none; */
+}
+
+/*майн каталога*/
+
+button {
+  font: inherit;
+}
+
+label {
+  text-transform: uppercase;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.breadcrumbs {
+  font: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.inner-page h1 {
+  text-transform: uppercase;
+  color: #32425c;
+  background-color: #f2f6f8;
+}
+
+.product-information {
+  background-color: #f2f6f8;
+}
+
+.product-information p:first-child {
+  text-transform: uppercase;
+}
+
 /*футер*/
 
 .main-footer {
-  width: 1200px;
-  height: 300px;
   font: inherit;
   background-color: #32425c;
 }
 
-.container-footer a  {
-  width: 220px;
-  height: 68px;
-  padding-top: 20px;
-  padding-left: 41px;
+.footer-address a {
+  padding: 20px 41px 25px 41px;
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
   display: block;
@@ -187,14 +331,32 @@ h1 {
   height: 23px;
 }
 
-.site-navigation,
+.site-navigation-footer,
 .site-info {
   list-style: none;
 }
 
-.site-navigation a {
+.site-navigation-footer a {
   color: #f1f5f7;
   background-color: #32425c;
+}
+
+.site-navigation-footer a:hover,
+.site-navigation-footer a:focus {
+  text-decoration: underline;
+}
+
+.site-navigation-footer a:active {
+  opacity: 0.5;
+}
+
+.site-info a:hover,
+.site-info a:focus {
+  text-decoration: underline;
+}
+
+.site-info a:active {
+  opacity: 0.5;
 }
 
 .contacts-footer .address {
@@ -208,15 +370,13 @@ h1 {
 }
 
 .bottom-footer {
-  width: 1200px;
-  height: 107px;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
   background-color: #293449;
 }
 
-.container p {
+.developers {
   color: #ffffff;
 }
 
@@ -231,4 +391,13 @@ h1 {
 .footer-feedback a,
 .footer-copyright a {
   color: #ffd180;
+}
+
+.developers a:hover,
+.developers a:focus {
+  text-decoration: underline;
+}
+
+.developers a:active {
+  color: #ee3643;
 }
