@@ -4,7 +4,7 @@ body {
 
   font-size: 18px;
   line-height: 24px;
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
@@ -20,7 +20,7 @@ a {
   
   font-size: 13px;
   line-height: 18px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
@@ -259,7 +259,7 @@ a {
 
 .about-company p,
 .contacts p {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
@@ -274,18 +274,6 @@ a {
 
 /*майн каталога*/
 
-button {
-  font: inherit;
-}
-
-label {
-  text-transform: uppercase;
-}
-
-.old-price {
-  text-decoration: line-through;
-}
-
 .breadcrumbs {
   font: inherit;
   text-transform: uppercase;
@@ -299,17 +287,100 @@ label {
 }
 
 .inner-page h1 {
+  font-family: "Cuprum", Arial, sans-serif;
   text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
   color: #32425c;
   background-color: #f2f6f8;
 }
 
-.product-information {
-  background-color: #f2f6f8;
+/*фильтр*/
+
+.filter-form li {
+  list-style: none;
 }
 
-.product-information p:first-child {
+.filters h2 {
   text-transform: uppercase;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter-form label {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filter-form button {
+  font: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+/*карточки товаров*/
+
+.catalog-list li {
+  list-style: none;
+}
+
+.buy,
+.to-bookmarks {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.buy {
+  color: #ffffff;
+  background-color: #63a63e;
+  box-shadow: inset 0px -3px 0 0 #367315;
+}
+
+.to-bookmarks {
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.catalog-category {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.catalog-item-price {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999999;
+  background-color: #ffffff;
+}
+
+.current-price {
+  color: #ffffff;
+  background-color: #ee3643;
 }
 
 /*футер*/
