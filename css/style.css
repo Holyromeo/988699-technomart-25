@@ -181,6 +181,11 @@ input[type="search"].visually-hidden {
   opacity: 0.6;
 }
 
+.make-order p a:hover::before,
+.make-order p a:focus::before {
+  opacity: 1;
+}
+
 .make-order-button a:hover,
 .make-order-button a:focus {
   background-color: #5fbb2d;
@@ -201,10 +206,8 @@ input[type="search"].visually-hidden {
 .header-information-middle {
   display: flex;
   justify-content: flex-end;
-  padding: 0;
   align-items: flex-start;
-  margin-bottom: 40px;
-  outline: 5px dotted red;
+  margin-bottom: 35px;
 }
 
 .site-title {
@@ -217,7 +220,6 @@ input[type="search"].visually-hidden {
   margin-left: auto;
   color: #ee3643;
   background-color: #f4f7f9;
-  outline: 5px dotted red;
 }
 
 .site-navigation,
@@ -228,7 +230,6 @@ input[type="search"].visually-hidden {
 .contacts-header {
   width: 270px; 
   margin-left: 60px;
-  outline: 5px dotted red;
 }
 
 .contacts-header p {
@@ -278,7 +279,6 @@ input[type="search"].visually-hidden {
   width: 300px;
   margin-top: 0;
   margin-left: 50px;
-  outline: 5px dotted red;
 }
 
 .user-navigation li {
@@ -317,6 +317,10 @@ input[type="search"].visually-hidden {
   color: #ee3643;
 }
 
+/* .user-navigation li:nth-child(1) a:hover::before {
+  opacity: 1;
+} */
+
 .user-navigation a:active {
   opacity: 0.3;
 }
@@ -326,7 +330,7 @@ input[type="search"].visually-hidden {
 .user-id {
   width: 300px;
   margin-left: 50px;
-  /* outline: 5px dotted red; */
+  outline: 5px dotted red;
 }
 
 .username {
@@ -353,24 +357,22 @@ input[type="search"].visually-hidden {
 
 /* хедер навигация */
 
-/* .main-navigation {
-  padding-bottom: 60px;
-} */
-
 .main-navigation .site-navigation {
-  padding: 20px;
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
-  /* outline: 5px dotted red;    */
 }
 
-/* .site-navigation {
+.site-navigation {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 940px;
   outline: 5px dotted red;  
-} */
+}
 
 .site-navigation a {
+  display: block;
+  padding: 20px 30px;
+  vertical-align: middle;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
@@ -379,7 +381,7 @@ input[type="search"].visually-hidden {
 
 .site-navigation a:hover,
 .site-navigation a:focus {
-  background-color: 293449; 
+  background-color: #293449; 
 }
 
 .site-navigation a:active {
