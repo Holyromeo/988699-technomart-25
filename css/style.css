@@ -203,6 +203,8 @@ input[type="search"].visually-hidden {
 .header-information-middle {
   display: flex;
   justify-content: flex-end;
+  padding: 0;
+  margin: 0;
   margin-bottom: 40px;
   outline: 5px dotted red;
 }
@@ -283,8 +285,6 @@ input[type="search"].visually-hidden {
 
 .user-navigation li {
   width: 150px;
-  margin: 0;
-  padding: 0;
 }
 
 .user-navigation li:nth-child(1) {
@@ -317,14 +317,14 @@ input[type="search"].visually-hidden {
   background-position: 0 0;
 }
 
-/* .user-navigation a:hover,
+.user-navigation a:hover,
 .user-navigation a:focus {
   color: #ee3643;
 }
 
 .user-navigation a:active {
   opacity: 0.3;
-} */
+}
 
 /* хедер каталога */
 
