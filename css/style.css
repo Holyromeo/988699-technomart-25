@@ -21,7 +21,8 @@ img {
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type="radio"].visually-hidden,
+input[type="search"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -109,7 +110,6 @@ input[type="radio"].visually-hidden {
 }
 
 .make-order p {
-  position: relative;
   padding: 0;
   margin: 0;
   width: 150px;
@@ -123,53 +123,53 @@ input[type="radio"].visually-hidden {
   width: 270px;
 }
 
-.make-order p::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 17px;
-  width: 17px;
-  height: 17px;
-  background-color: #ffffff;
-  opacity: 0.3;
-}
-
-.make-order p:last-child::before {
-  display: none;
-}
-
-.make-order p:nth-child(1)::before {
-  background-image: url("img/icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.make-order p:nth-child(2)::before {
-  background-image: url("img/icon-bookmark.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.make-order p:nth-child(3)::before {
-  background-image: url("img/icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
 .make-order a {
+  position: relative;
   display: block;
   vertical-align: middle;
   font-size: 17px;
   line-height: 18px;
   padding: 14px 45px;
   color: #ffffff;
+  white-space: nowrap;
   background-color: #293449;
 }
 
 .make-order-button a {
   padding-left: 20px;
-  white-space: nowrap;
   background-color: #63a63e;
+}
+
+.make-order a::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  width: 17px;
+  height: 17px;
+  opacity: 0.3;
+}
+
+.make-order-button a::before {
+  display: none;
+}
+
+.make-order a:nth-child(1)::before {
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.make-order a:nth-child(2)::before {
+  background-image: url("../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.make-order a:nth-child(3)::before {
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .make-order a:hover,
