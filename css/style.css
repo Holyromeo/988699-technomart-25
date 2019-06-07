@@ -154,19 +154,19 @@ input[type="search"].visually-hidden {
   display: none;
 }
 
-.make-order a:nth-child(1)::before {
+.make-order p:nth-child(1) a::before {
   background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.make-order a:nth-child(2)::before {
+.make-order p:nth-child(2) a::before {
   background-image: url("../img/icon-bookmark.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.make-order a:nth-child(3)::before {
+.make-order p:nth-child(3) a::before {
   background-image: url("../img/icon-cart.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -203,9 +203,8 @@ input[type="search"].visually-hidden {
 .header-information-middle {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   margin-bottom: 40px;
-  /* outline: 5px dotted red;  */
+  outline: 5px dotted red;
 }
 
 .site-title {
@@ -214,10 +213,11 @@ input[type="search"].visually-hidden {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
+  margin: 0;
   margin-left: auto;
   color: #ee3643;
   background-color: #f4f7f9;
-  /* outline: 5px dotted red; */
+  outline: 5px dotted red;
 }
 
 .site-navigation,
@@ -227,17 +227,37 @@ input[type="search"].visually-hidden {
 
 .contacts-header {
   width: 270px; 
+  margin: 0;
   margin-left: 60px;
-  /* outline: 5px dotted red; */
+  outline: 5px dotted red;
+}
+
+.contacts-header p {
+  margin: 0;
+  padding: 0;
 }
 
 .contacts-header .phone-number {
+  position: relative;
   font-size: 21px;
   line-height: 21px;
   text-align: left;
+  padding: 9px 44px 9px 70px;
   color: #ee3643;
   background-color: #f4f7f9;
   border: 3px solid #ffffff;
+}
+
+.contacts-header .phone-number::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .contacts-header .address {
@@ -253,27 +273,58 @@ input[type="search"].visually-hidden {
   list-style: none;
 }
 
+.user-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-left: 50px;
+  outline: 5px dotted red;
+}
+
+.user-navigation li {
+  width: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.user-navigation li:nth-child(1) {
+  width: 120px;
+}
+
 .user-navigation a {
+  margin: 0;
+  padding: 12px 25px;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
   background-color: #ffffff;
 }
 
-.user-navigation {
-  width: 300px; 
-  margin-left: 50px;
-  /* outline: 5px dotted red; */
+.user-navigation li:nth-child(1) a {
+  position: relative;
+  padding-left: 50px;
 }
 
-.user-navigation a:hover,
+.user-navigation li:nth-child(1) a::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* .user-navigation a:hover,
 .user-navigation a:focus {
   color: #ee3643;
 }
 
 .user-navigation a:active {
   opacity: 0.3;
-}
+} */
 
 /* хедер каталога */
 
