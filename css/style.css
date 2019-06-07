@@ -64,7 +64,6 @@ input[type="search"].visually-hidden {
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
-  /* outline: 5px dotted red; */
 }
 
 .navigation {
@@ -197,14 +196,13 @@ input[type="search"].visually-hidden {
 .header-information {
   display: flex;
   flex-direction: column;
-  /* outline: 5px dotted red; */
 }
 
 .header-information-middle {
   display: flex;
   justify-content: flex-end;
   padding: 0;
-  margin: 0;
+  align-items: flex-start;
   margin-bottom: 40px;
   outline: 5px dotted red;
 }
@@ -229,7 +227,6 @@ input[type="search"].visually-hidden {
 
 .contacts-header {
   width: 270px; 
-  margin: 0;
   margin-left: 60px;
   outline: 5px dotted red;
 }
@@ -277,22 +274,14 @@ input[type="search"].visually-hidden {
 
 .user-navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 300px;
+  margin-top: 0;
   margin-left: 50px;
   outline: 5px dotted red;
 }
 
 .user-navigation li {
-  width: 150px;
-}
-
-.user-navigation li:nth-child(1) {
-  width: 120px;
-}
-
-.user-navigation a {
-  margin: 0;
   padding: 12px 25px;
   font-size: 21px;
   line-height: 21px;
@@ -300,9 +289,16 @@ input[type="search"].visually-hidden {
   background-color: #ffffff;
 }
 
-.user-navigation li:nth-child(1) a {
+.user-navigation li {
+  margin: 0;
+  width: 150px;
+}
+
+.user-navigation li:nth-child(1) {
+  width: 120px;
   position: relative;
   padding-left: 50px;
+  margin-right: 10px;
 }
 
 .user-navigation li:nth-child(1) a::before {
