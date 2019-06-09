@@ -300,16 +300,14 @@ input[type="search"].visually-hidden {
   margin-right: 10px;
 }
 
-.user-navigation li:nth-child(1) a::before {
-  content: "";
+.login-link-enter a {
+  position: relative;
+}
+
+.login-link-enter a svg {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 21px;
-  height: 21px;
-  background-image: url("../img/icon-login.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  top: 4px;
+  left: -35px;
 }
 
 .user-navigation a:hover,
@@ -317,9 +315,10 @@ input[type="search"].visually-hidden {
   color: #ee3643;
 }
 
-/* .user-navigation li:nth-child(1) a:hover::before {
-  opacity: 1;
-} */
+.login-link-enter a:hover path,
+.login-link-enter a:focus path {
+  fill: #000000;
+}
 
 .user-navigation a:active {
   opacity: 0.3;
@@ -334,18 +333,56 @@ input[type="search"].visually-hidden {
 }
 
 .username {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
   font-size: 21px;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
   color: #000000;
   background-color: #ffffff;
+}
+
+.username a {
+  display: flex;
+  margin: 0;
+  margin-left: 13px;
+  padding: 0;
+}
+
+.username svg {
+  position: absolute;
+  top: 15px;
+}
+
+.username a:last-child {
+  margin-right: 32px;
+}
+
+.username:hover path,
+.username:focus path {
+  fill: #000000;
+}
+
+.username:active path,
+.username a:active {
+  opacity: 0.3;
 }
 
 .username p {
+  margin: 0;
+  padding: 14px 0 11px 47px;
   color: #000000;
   background-color: #ffffff;
 }
 
+.username .logout {
+  margin-right: 10px;
+}
+
 .user-id .button {
+  margin-left: 10px;
   font: inherit;
   text-align: center;
   color: #32425c;
@@ -353,6 +390,15 @@ input[type="search"].visually-hidden {
   background-color: #f4f7f9;
   text-decoration: underline;
   border: none;
+}
+
+.user-id .button:hover,
+.user-id .button:focus {
+  color: #ee3643;
+}
+
+.user-id .button:active {
+  opacity: 0.3;
 }
 
 /* хедер навигация */
@@ -458,10 +504,12 @@ input[type="search"].visually-hidden {
   margin-bottom: 86px;
 }
 
-.button {
+.about-company .button,
+.contacts-modal-map .button {
   display: inline-block;
   padding: 13px 40px; 
-  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
   color: #ffffff;
   vertical-align: middle;
@@ -476,8 +524,8 @@ input[type="search"].visually-hidden {
 }
 
 .modal-map .button {
-  font-size: 14px;
-  line-height: 18px;
+ /*  font-size: 14px;
+  line-height: 18px; */
   padding: 13px 61px;
 }
 
