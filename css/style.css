@@ -51,8 +51,10 @@ input[type="search"].visually-hidden {
   margin: 0 auto;
 }
 
+
 /*хедер*/
 /* хедр верх */
+
 
 .main-header {
   background-color: #f4f7f9;
@@ -194,7 +196,9 @@ input[type="search"].visually-hidden {
   opacity: 0.5;
 }
 
+
 /* хедер центр */
+
 
 .header-information {
   display: flex;
@@ -318,16 +322,19 @@ input[type="search"].visually-hidden {
   fill: #000000;
 }
 
-.login-link:active {
+.login-link a:active {
+  color: #000000;
   opacity: 0.3;
 }
 
+
 /* хедер каталога */
+
 
 .user-id {
   width: 300px;
   margin-left: 50px;
-  outline: 5px dotted red;
+  /* outline: 5px dotted red; */
 }
 
 .username {
@@ -380,7 +387,8 @@ input[type="search"].visually-hidden {
 }
 
 .user-id .button {
-  margin-left: 10px;
+  position: relative;
+  margin-left: 15px;
   font: inherit;
   text-align: center;
   color: #32425c;
@@ -388,6 +396,17 @@ input[type="search"].visually-hidden {
   background-color: #f4f7f9;
   text-decoration: underline;
   border: none;
+}
+
+.user-id .button:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -13px;
+  width: 5px;
+  height: 5px;
+  background-color: #32425c;
+  border-radius: 50%
 }
 
 .user-id .button:hover,
@@ -399,7 +418,9 @@ input[type="search"].visually-hidden {
   opacity: 0.3;
 }
 
+
 /* хедер навигация */
+
 
 .main-navigation .site-navigation {
   box-shadow: inset 0px -5px 0 0 #293449;
@@ -436,8 +457,10 @@ input[type="search"].visually-hidden {
 	
 }
 
+
 /*майн главной*/
 /* майн низ */
+
 
 .about-company h2,
 .contacts h2 {
@@ -525,42 +548,60 @@ input[type="search"].visually-hidden {
   padding: 13px 61px;
 }
 
+
 /*майн каталога*/
+
 
 .inner-page .container {
   display: flex;
   flex-direction: column;
-  outline: 5px dotted red;
+  /* outline: 5px dotted red; */
 }
 
 .breadcrumbs {
+  margin: 0;
+  padding: 0;
   font: inherit;
   text-transform: uppercase;
   text-decoration: none;
   list-style: none;
   width: 380px;
-  margin-bottom: 20px;
   display: flex;
-  /* outline: 5px dotted red; */
+}
+
+.breadcrumbs li,
+.breadcrumbs span {
+  position: relative;
+  padding: 25px 0;
+}
+
+.breadcrumbs a::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 10px;
+  width: 8px;
+  height: 12px;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .breadcrumbs li:nth-child(1) {
   width: 100px;
-  /* outline: 5px dotted red; */
 }
 
 .breadcrumbs li:nth-child(2) {
   width: 120px;
-  /* outline: 5px dotted red; */
 }
 
 .breadcrumbs li:nth-child(3) {
   width: 150px;
   margin-right: auto;
-  /* outline: 5px dotted red; */
 }
 
 .breadcrumbs a {
+  padding-left: 40px;
   color: #000000;
   background-color: #ffffff;
 }
@@ -574,6 +615,7 @@ input[type="search"].visually-hidden {
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
+  margin: 0;
   margin-bottom: 20px;
   color: #32425c;
   background-color: #f2f6f8;
@@ -585,17 +627,17 @@ input[type="search"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* outline: 5px dotted red; */
+  outline: 5px dotted red;
 }
 
 .filters {
   width: 220px;
-  /* outline: 5px dotted red; */
+  outline: 5px dotted red;
 }
 
 .catalog {
   width: 700px;
-  /* outline: 5px dotted red; */
+  outline: 5px dotted red;
 }
 
 /*фильтр*/
@@ -605,18 +647,30 @@ input[type="search"].visually-hidden {
 }
 
 .filters h2 {
+  font-size: 13px;
+  line-height: 18px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 14px 18px;  
+  background-color: #f7f3ec;
 }
 
 .filters fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
   border: none;
 }
 
 .filters legend {
+  width: 215px;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+  padding-top: 25px;
+  color: #000000;
+  border-top: 1px solid #e5e5e5;
 }
 
 .filter-form label {
@@ -702,7 +756,9 @@ input[type="search"].visually-hidden {
   background-color: #ee3643;
 }
 
+
 /*футер*/
+
 
 .main-footer {
   font: inherit;
