@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-
   font-size: 18px;
   line-height: 24px;
   font-family: "Cuprum", Arial, sans-serif;
@@ -24,15 +23,12 @@ input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden,
 input[type="search"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -60,7 +56,6 @@ input[type="search"].visually-hidden {
 
 .main-header {
   background-color: #f4f7f9;
-  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
 }
@@ -136,6 +131,10 @@ input[type="search"].visually-hidden {
 .make-order-button a {
   padding-left: 20px;
   background-color: #63a63e;
+}
+
+.inner-page-cart a{
+  background-color: #ee3643;
 }
 
 .make-order a::before {
@@ -309,17 +308,17 @@ input[type="search"].visually-hidden {
   left: -35px;
 }
 
-.user-navigation a:hover,
-.user-navigation a:focus {
+.login-link:hover,
+.login-link:focus {
   color: #ee3643;
 }
 
-.login-link-enter a:hover path,
-.login-link-enter a:focus path {
+.login-link-enter:hover path,
+.login-link-enter:focus path {
   fill: #000000;
 }
 
-.user-navigation a:active {
+.login-link:active {
   opacity: 0.3;
 }
 
@@ -328,7 +327,7 @@ input[type="search"].visually-hidden {
 .user-id {
   width: 300px;
   margin-left: 50px;
-  /* outline: 5px dotted red; */
+  outline: 5px dotted red;
 }
 
 .username {
