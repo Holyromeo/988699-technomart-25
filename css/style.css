@@ -41,7 +41,6 @@ input[type="search"].visually-hidden {
 .inner-page {
   margin: 0;
   padding: 0;
-  
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -277,8 +276,8 @@ input[type="search"].visually-hidden {
   display: flex;
   justify-content: flex-end;
   width: 300px;
-  margin-top: 0;
-  margin-left: 50px;
+  margin: 0;
+  margin-left: 10px;
 }
 
 .user-navigation li {
@@ -329,7 +328,7 @@ input[type="search"].visually-hidden {
 .user-id {
   width: 300px;
   margin-left: 50px;
-  outline: 5px dotted red;
+  /* outline: 5px dotted red; */
 }
 
 .username {
@@ -524,8 +523,6 @@ input[type="search"].visually-hidden {
 }
 
 .modal-map .button {
- /*  font-size: 14px;
-  line-height: 18px; */
   padding: 13px 61px;
 }
 
@@ -534,7 +531,7 @@ input[type="search"].visually-hidden {
 .inner-page .container {
   display: flex;
   flex-direction: column;
-  /* outline: 5px dotted red; */
+  outline: 5px dotted red;
 }
 
 .breadcrumbs {
