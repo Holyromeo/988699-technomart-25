@@ -843,8 +843,25 @@ input[type="search"].visually-hidden {
   display: block;
 }
 
-.catalog-item .actions {
-  display: none;
+.catalog-item .actions .buy:hover,
+.catalog-item .actions .buy:focus {
+  box-shadow: inset 0px -3px 0 0 #367315;
+  background-color: #5fbb2d;
+}
+
+.catalog-item .actions .buy:active {
+  background-color: #518534;
+}
+
+.catalog-item .actions .to-bookmark:hover,
+.catalog-item .actions .to-bookmark:focus {
+  color: #32425c;
+  background: white;
+  border-color: #32425c;
+}
+
+.catalog-item .actions .to-bookmark:active {
+  opacity: 0.3;
 }
 
 .catalog-item .image {
