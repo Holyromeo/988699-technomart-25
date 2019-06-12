@@ -627,20 +627,22 @@ input[type="search"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  outline: 5px dotted red;
+  /* outline: 5px dotted red; */
 }
 
 .filters {
   width: 220px;
-  outline: 5px dotted red;
+  /* outline: 5px dotted red; */
 }
 
 .catalog {
   width: 700px;
-  outline: 5px dotted red;
+  /* outline: 5px dotted red; */
 }
 
+
 /*фильтр*/
+
 
 .filter-form li {
   list-style: none;
@@ -652,15 +654,17 @@ input[type="search"].visually-hidden {
   text-transform: uppercase;
   margin: 0;
   padding: 14px 18px;  
+  border-radius: 3px;
   background-color: #f7f3ec;
 }
 
 .filters fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 75px;
   border: none;
 }
+
 
 .filters legend {
   width: 215px;
@@ -669,14 +673,79 @@ input[type="search"].visually-hidden {
   line-height: 30px;
   text-transform: uppercase;
   padding-top: 25px;
+  margin-bottom: 20px;
   color: #000000;
   border-top: 1px solid #e5e5e5;
 }
 
-.filter-form label {
+.filter-form ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 18px;
+}
+
+.filter-option {
+  margin-bottom: 30px;
+  padding-left: 35px;
+}
+
+.filter-option label {
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: -2px;
+  width: 24px;
+  height: 24px;  
+ background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: -2px;
+  width: 24px;
+  height: 24px;  
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-form button {
@@ -685,6 +754,7 @@ input[type="search"].visually-hidden {
   text-align: center;
   color: #000000;
   vertical-align: middle;
+  padding: 15px 39px;
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
 }
@@ -699,36 +769,95 @@ input[type="search"].visually-hidden {
   /* outline: 5px dotted red; */
 }
 
-.catalog-list li {
-  list-style: none;
-  width: 220px;
+.catalog-item {
+  position: relative;
+  display: inline-block;
+  width: 218px;
   margin-right: 20px;
   margin-bottom: 20px;
-  /* outline: 5px dotted red; */
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.catalog-item .flag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.catalog-item .flag-new {
+  background: url("../img/new-flag.png") no-repeat 0 0;
+}
+
+.catalog-item .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  color: #ffffff;
+  background-color: #ffffff;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.catalog-item .actions .buy,
+.catalog-item .actions .to-bookmark {
+  display: block;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
+  background-color: #63a63e;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  border-radius:3px;
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Cuprum", sans-serif;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.catalog-item .actions .to-bookmark {
+  color: #32425c;
+  background: white;
+  border-bottom-color: #63a63e;
+}
+
+.catalog-item .actions {
+  display: none;
+}
+
+.catalog-item:hover .actions {
+  display: block;
+}
+
+.catalog-item .actions {
+  display: none;
+}
+
+.catalog-item .image {
+  width: 218px;
+  height: 168px;
+}
+
+.catalog-item .image img {
+  max-width: 100%;
 }
 
 .catalog-list li:nth-child(3n) {
   margin-right: 0;
-}
-
-.buy,
-.to-bookmarks {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
-.buy {
-  color: #ffffff;
-  background-color: #63a63e;
-  box-shadow: inset 0px -3px 0 0 #367315;
-}
-
-.to-bookmarks {
-  color: #32425c;
-  background-color: #ffffff;
-  border: 3px solid #63a63e;
 }
 
 .catalog-category {
@@ -739,21 +868,47 @@ input[type="search"].visually-hidden {
   background-color: #ffffff;
 }
 
-.catalog-item-price {
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: 700;
+.tool-name {
+  min-height: 40px;
+  padding: 0 25px;
+  margin-top: 10px;
+  margin-bottom: 15px; 
 }
 
 .old-price {
-  text-decoration: line-through;
+  display: block;
+  font-size: 17px;
+  line-height: 18px;
+  min-height: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   color: #999999;
-  background-color: #ffffff;
+  text-decoration: line-through;
 }
 
 .current-price {
+  position: relative;
+  width: 80px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  display: block;
+  font-size: 17px;
+  line-height: 18px;
   color: #ffffff;
   background-color: #ee3643;
+  border-radius: 3px;
+}
+
+.catalog-item .current-price:after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 20px solid white;
+  border-left-color: #ee3643;
 }
 
 
