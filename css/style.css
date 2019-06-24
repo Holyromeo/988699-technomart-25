@@ -523,6 +523,16 @@ input[type="search"].visually-hidden {
   text-transform: uppercase;
   box-shadow: none;
   border-radius: 3px;
+  /* background-color: #e5e5e5; */
+}
+
+.main-top .button:hover,
+.main-top .button:focus {
+  background-color: #cccccc;
+}
+
+.main-top .button:active {
+  background-color: #b2b2b2;
 }
 
 .button-materials {
@@ -634,6 +644,7 @@ input[type="search"].visually-hidden {
 }
 
 
+
 /*слайдер*/
 
 
@@ -680,6 +691,15 @@ input[type="search"].visually-hidden {
   text-transform: uppercase;
 }
 
+.gallery .button:hover,
+.gallery .button:focus {
+  background-color: #ca2c37;
+}
+
+.gallery .button:active {
+  background-color: #ba2732;
+}
+
 .gallery .gallery-label {
   position: absolute;
 }
@@ -705,6 +725,7 @@ input[type="search"].visually-hidden {
 
 
 /*Популярные товары*/
+
 
 .popular-goods {
   margin-bottom: 20px;
@@ -741,7 +762,8 @@ input[type="search"].visually-hidden {
 }
 
 
-/*карточки популярных товаров*/
+/*Карточки популярных товаров*/
+
 
 .catalog-list-main {
   margin: 0;
@@ -755,12 +777,22 @@ input[type="search"].visually-hidden {
   margin-right: 0;
 }
 
+.catalog-list-main .catalog-item:hover,
+.catalog-list-main .catalog-item:focus {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
 
-/*карточки популярных производителей*/
+.catalog-list-main .catalog-item:hover img,
+.catalog-list-main .catalog-item:focus img {
+  opacity: 0;
+}
+
+/*Карточки популярных производителей*/
 
 
 .manufacturer {
-  width: 220px;
+  position: relative;
+  width: 218px;
   min-height: 145px;
   list-style: none;
   border: 1px solid #eaeaea;
@@ -769,9 +801,24 @@ input[type="search"].visually-hidden {
   margin-bottom: 20px;
 }
 
+.manufacturer:hover,
+.manufacturer:focus {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.manufacturer:active {
+  box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.manufacturer:active img {
+  opacity: 0.3;
+}
+
 .manufacturer img {
-  display: inline-block;
-  vertical-align: middle;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .manufacturers-list {
@@ -781,6 +828,37 @@ input[type="search"].visually-hidden {
   flex-wrap: wrap;
 }
 
+.manufacturers-list li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.manufacturers-all {
+  margin-bottom: 90px;
+}
+
+
+/*Сервисы*/
+
+
+.services {
+  background-color: #f4f7f9;
+}
+
+.services h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.services p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+.service-delivery h2 {
+  font-size: 36px;
+  line-height: 36px;
+}
 
 /* майн низ */
 
