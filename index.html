@@ -55,82 +55,207 @@
 	  </div>
 	</header>
     <main class="main-content">
-	  <div class="container">
-	    <!-- <div class="img-top">
-	      <div class="materials">
-		    <h3>Материалы</h3>
-		    <button class="button button-materials" type="button">
-		    на любой вкус
-		    </button>
-		  </div>
-		  <div class="tools">
-		    <h3>Инструмент</h3>
-		    <button class="button button-tools" type="button">
-		    на все случаи
-		    </button>
-		  </div>
-		  <div class="equipment">
-		    <h3>Техника</h3>
-		    <button class="button button-equipment" type="button">
-		    для стройки
-		    </button>
-		  </div>
-		  <div class="discount">
-		    <h3>Скидки 50%</h3>
-		    <button class="button button-discount" type="button">
-		    на 350 товаров
-		    </button>
-		  </div>
-		  <div class="delivery">
-		    <h3>Доставка</h3>
-		    <button class="button button-delivery" type="button">
-		    бесплатно
-		    </button>
-		  </div>
-		  <section class="gallery">
-		    <h2 class="visually-hidden">Слайдер</h2>
-			<figure class="gallery-content">
-              <a href="#">
-               <img src="img/perforator.jpg" width="620" height="266" alt="Человек с перфоратором">
-              </a>
-            </figure>
-		    <button class="button gallery-button gallery-button-back" type="button">
-		      <p class="visually-hidden">Назад</p>
-		    </button>
-            <button class="button gallery-button gallery-button-next" type="button">
-		      <p class="visually-hidden">Вперед</p>
-		    </button>
-		  </section>
-		</div> -->
-		<!-- <div> -->
-	    <div class="about-company">
-	      <h2>Компания «Техномарт»</h2>
-	      <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров
-		  для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-		  <p>Мы можем доставить ваш товар в самые отдаленные точки России!</br>
-          Техномарт работает со многими транспортными компаниями:</p>
-		  <ul class="delivery-company">
-		    <li>Деловые линии</li>
-		    <li>Автотрейдинг</li>
-		    <li>ЖелДорЭкспедиция</li>
-		  </ul>
-		  <a class="button" href="about-us.html">Подробнее о компании</a>
+      <div class="container">
+        <section class="main-top">
+          <div class="top-main-top">
+            <div class="materials">
+              <div class="flag flag-new">новинка</div>
+              <h3>Материалы</h3>
+              <button class="button button-materials" type="button">
+              на любой вкус
+              </button>
+            </div>
+            <div class="tools">
+              <h3>Инструмент</h3>
+              <button class="button button-tools" type="button">
+              на все случаи
+              </button>
+            </div>
+            <div class="equipment">
+              <h3>Техника</h3>
+              <button class="button button-equipment" type="button">
+              для стройки
+              </button>
+            </div>
+          </div>
+          <div class="bottom-main-top">
+            <section class="gallery">
+              <h2 class="visually-hidden">Слайдер</h2>
+              <div class="gallery-label">
+                <p>Дрели</p>
+                <p>Соседям на радость!</p>
+              </div>
+              <figure class="gallery-content gallery-content-secondimg">
+                <a href="#">
+                  <img src="img/handdrill.jpg" alt="Человек с шуруповертом">
+                </a>
+              </figure>
+              <figure class="visually-hidden gallery-content gallery-content-firstimg">
+                <a href="#">
+                  <img src="img/perforator.jpg" alt="Человек с перфоратором">
+                </a>
+              </figure>
+              <div class="slider-switch">
+                <input class="slider-input-radio slider-input-previous" type="radio" name="type" value="previous" id="slider-previous" checked>
+                <input class="slider-input-radio slider-input-next" type="radio" name="type" value="next" id="slider-next">
+              </div>
+              <a class="button" href="inner.html">Открыть каталог</a>
+            </section>
+            <div class="bottom-main-top-bottom">
+              <div class="discount">
+                <h3>Скидки 50%</h3>
+                <button class="button button-discount" type="button">
+                на 350 товаров
+                </button>
+              </div>
+              <div class="delivery">
+                <h3>Доставка</h3>
+                <button class="button button-delivery" type="button">
+                бесплатно
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-middle">
+          <div class="popular-goods">
+            <p>Популярные товары:</p>
+            <a class="button" href="#">Все популярные товары</a>
+          </div>
+          <div class="popular-goods-cards">
+            <h2 class="visually-hidden">Список перфораторов</h2>
+            <ul class="catalog-list-main">
+              <li class="catalog-item">
+                <!-- <div class="flag flag-new">новинка</div> -->
+                <div class="actions">
+                  <a href="#" class="buy">Купить</a>
+                  <a href="#" class="to-bookmark">В закладки</a>
+                </div>
+                <div class="catalog-item-image">
+                  <a href="catalog-item.html">
+                   <img src="img/product-4.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 9000">
+                  </a>
+                </div>
+                <h3 class="tool-name">
+                  <a href="catalog-item.html">
+                    <span class="catalog-category">Перфоратор BOSCH BFG 9000</span>
+                  </a>
+                </h3>
+                <span class="old-price">32500</span>
+                <span class="current-price">25500</span>
+              </li>
+              <li class="catalog-item">
+                <!-- <div class="flag flag-new">новинка</div> -->
+                <div class="actions">
+                  <a href="#" class="buy">Купить</a>
+                  <a href="#" class="to-bookmark">В закладки</a>
+                </div>
+                <div class="catalog-item-image">
+                  <a href="catalog-item.html">
+                   <img src="img/product-1.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000">
+                  </a>
+                </div>
+                <h3 class="tool-name">
+                  <a href="catalog-item.html">
+                    <span class="catalog-category">Перфоратор BOSCH BFG 3000</span>
+                  </a>
+                </h3>
+                <span class="old-price">22500</span>
+                <span class="current-price">15500</span>
+              </li>
+              <li class="catalog-item">
+                <!-- <div class="flag flag-new">новинка</div> -->
+                <div class="actions">
+                  <a href="#" class="buy">Купить</a>
+                  <a href="#" class="to-bookmark">В закладки</a>
+                </div>
+                <div class="catalog-item-image">
+                  <a href="catalog-item.html">
+                   <img src="img/product-2.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000">
+                  </a>
+                </div>
+                <h3 class="tool-name">
+                  <a href="catalog-item.html">
+                    <span class="catalog-category">Перфоратор BOSCH BFG 6000</span>
+                  </a>
+                </h3>
+                <span class="old-price">30500</span>
+                <span class="current-price">25500</span>
+              </li>
+              <li class="catalog-item">
+                <div class="flag flag-new">новинка</div>
+                <div class="actions">
+                  <a href="#" class="buy">Купить</a>
+                  <a href="#" class="to-bookmark">В закладки</a>
+                </div>
+                <div class="catalog-item-image">
+                  <a href="catalog-item.html">
+                   <img src="img/product-3.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000">
+                  </a>
+                </div>
+                <h3 class="tool-name">
+                  <a href="catalog-item.html">
+                    <span class="catalog-category">Перфоратор BOSCH BFG 2000</span>
+                  </a>
+                </h3>
+                <span class="old-price"></span>
+                <span class="current-price">12500</span>
+              </li>
+            </ul>
+          </div>
+          <div class="popular-goods">
+            <p>Популярные производители:</p>
+            <a class="button" href="#">Все производители</a>
+          </div>
+          <div>
+            <h2 class="visually-hidden">Список производителей</h2>
+            <ul class="manufacturers-list">
+              <li class="manufacturer">
+                <img src="img/Bosch.jpg" width="126" height="37" alt="Производитель BOSCH">
+              </li>
+              <li class="manufacturer">
+                <img src="img/Makita.jpg" width="123" height="40" alt="Производитель MAKITA">
+              </li>
+              <li class="manufacturer">
+                <img src="img/DeWALT.jpg" width="146" height="44" alt="Производитель DeWALT">
+              </li>
+              <li class="manufacturer">
+                <img src="img/Interskol.jpg" width="180" height="25" alt="Производитель Interskol">
+              </li>
+            </ul>
+          </div>
+          <div>
+          </div>
+        </section>
+        <section class="main-bottom">
+          <div class="about-company">
+            <h2>Компания «Техномарт»</h2>
+            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров
+            для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России!</br>
+            Техномарт работает со многими транспортными компаниями:</p>
+            <ul class="delivery-company">
+              <li>Деловые линии</li>
+              <li>Автотрейдинг</li>
+              <li>ЖелДорЭкспедиция</li>
+            </ul>
+            <a class="button" href="about-us.html">Подробнее о компании</a>
+          </div>
+          <div class="contacts-modal-map">
+            <div class="contacts">
+              <h2>Контакты</h2>
+              <p>Вы можете забрать товар сами,</br> заехав в наш офис:</p>
+            </div>
+            <div class="modal modal-map">
+              <h3 class="visually-hidden">Как до нас добраться</h3>
+              <p>
+                <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная д.19, Санкт-Петербург">
+              </p>
+              <a class="button" href="contacts.html">Заблудились? Напишите нам!</a>
+            </div>
+          </div>
+        </section>
 	    </div>
-		<div class="contacts-modal-map">
-	      <div class="contacts">
-	        <h2>Контакты</h2>
-		    <p>Вы можете забрать товар сами,</br> заехав в наш офис:</p>
-	      </div>
-		  <div class="modal modal-map">
-		    <h3 class="visually-hidden">Как до нас добраться</h3>
-		    <p>
-		      <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная д.19, Санкт-Петербург">
-		    </p>
-		    <button class="modal-close" type="button">Закрыть</button>
-			<a class="button" href="contacts.html">Заблудились? Напишите нам!</a>
-		  </div>
-		</div>
-	  </div>
     </main>
 	<footer class="main-footer">
 	  <div class="top-footer">
