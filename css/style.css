@@ -120,6 +120,12 @@ input[type="search"].visually-hidden {
   width: 270px;
 }
 
+.make-order input {
+  border: 0;
+  font: inherit;
+}
+
+.make-order input,
 .make-order a {
   position: relative;
   display: block;
@@ -141,6 +147,7 @@ input[type="search"].visually-hidden {
   background-color: #ee3643;
 }
 
+.make-order input::before,
 .make-order a::before {
   content: "";
   position: absolute;
@@ -155,7 +162,7 @@ input[type="search"].visually-hidden {
   display: none;
 }
 
-.make-order p:nth-child(1) a::before {
+.make-order p:nth-child(1) input::before {
   background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -314,8 +321,8 @@ input[type="search"].visually-hidden {
   left: -35px;
 }
 
-.login-link:hover,
-.login-link:focus {
+.login-link a:hover,
+.login-link a:focus {
   color: #ee3643;
 }
 
@@ -787,6 +794,7 @@ input[type="search"].visually-hidden {
   opacity: 0;
 }
 
+
 /*Карточки популярных производителей*/
 
 
@@ -950,7 +958,7 @@ input[type="search"].visually-hidden {
 }
 
 .about-company .button,
-.contacts-modal-map .button {
+.contacts-map .button {
   display: inline-block;
   padding: 13px 40px; 
   font-size: 14px;
@@ -964,11 +972,11 @@ input[type="search"].visually-hidden {
   border-radius: 3px;
 }
 
-.modal-map p {
+.map p {
   margin-bottom: 30px;
 }
 
-.modal-map .button {
+.map .button {
   padding: 13px 61px;
 }
 
@@ -1552,3 +1560,232 @@ input[type="search"].visually-hidden {
 .developers a:active {
   color: #ee3643;
 }
+
+
+/*Всплывающие окна*/
+
+
+/*Форма регистрации*/
+
+
+.modal-container {
+  width: 460px;
+  padding: 0 80px;
+  margin: 0 auto;
+}
+
+.modal {
+  position: fixed;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  background-color: #ffffff;
+  border-top: 7px solid #ff5357;
+}
+
+.modal-login {
+  /* display: none; */
+  top: 100px;
+  left: 50%;
+  width: 620px;
+  margin-left: -330px;
+  padding: 50px 0 0;
+  color: #000000;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 21px;
+  height: 21px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: -49px;
+  width: 27px;
+  height: 5px;
+  background-color: #ee3643;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.login-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.login-item {
+  width: 220px;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.login-item label {
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Cuprum", Arial, sans-serif;
+  margin-bottom: 13px;
+}
+
+.login-item:last-child {
+  margin-bottom: 0;
+}
+
+.login-item input[type="text"],
+.login-item input[type="password"] {
+  box-sizing: border-box;
+  width: 220px;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", Arial, sans-serif;
+  padding-top: 14px;
+  padding-left: 16px;
+  padding-right: auto;
+  padding-bottom: 15px;
+  background-color: transparent;
+  border: 2px solid #dee3e4;
+  border-radius: 2px;
+}
+
+.login-item-letter input[type="text"] {
+  box-sizing: border-box;
+  width: 460px;
+  padding-top: 13px;
+  padding-left: 16px;
+  padding-right: 0;
+  padding-bottom: 88px;
+}
+
+.login-item input:hover {
+  border-color: #b5b5b5;
+}
+
+.login-item input:focus {
+  border-color: #ee3643;
+}
+
+.modal-login-button {
+  padding: 37px 0;
+  margin-top: 37px;
+  background-color: #f4f4f4;
+}
+
+.modal-login-button .button {
+  display: block;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;  
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border: none;
+  border-radius: 3px;
+}
+
+
+/*Карта попап*/
+
+
+.modal-map {
+  display: none;
+  top: 50%;
+  left: 50%;
+  margin-top: -223px;
+  margin-left: -470px;
+  width: 900px;
+  height: 420px;
+  border: 0;
+}
+
+.modal-map p {
+  margin: 0;
+}
+
+
+/*Корзина каталога*/
+
+
+.modal-cart {
+  display: none;
+  top: 100px;
+  left: 50%;
+  width: 620px;
+  margin-left: -330px;
+  padding: 50px 0 0;
+  color: #000000;
+}
+
+.modal-cart p {
+  display: block;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Cuprum", Arial, sans-serif;
+  margin: 0;
+  margin-bottom: 58px;
+  padding-left: 100px;
+}
+
+.modal-cart p:before {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 80px;
+  width: 66px;
+  height: 66px;
+  background-image: url("../img/confirm.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.modal-cart-button .modal-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-cart-button {
+  padding: 37px 0;
+  margin-top: 37px;
+  background-color: #f4f4f4;
+}
+
+.modal-cart-button .button {
+  width: 220px;
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;  
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border: none;
+  border-radius: 3px;
+}
+
+.modal-cart-button .button-2 {
+  color: #000000;
+  background-color: #ffffff;
+}
+
