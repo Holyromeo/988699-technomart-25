@@ -6,7 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
 	<link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -81,28 +81,38 @@
             </div>
           </div>
           <div class="bottom-main-top">
-            <section class="gallery">
+             <div class="gallery">
               <h2 class="visually-hidden">Слайдер</h2>
-              <div class="gallery-label">
-                <p>Дрели</p>
-                <p>Соседям на радость!</p>
+              <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+              <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+              <div class="gallery-switch">
+                <label class="gallery-switch-item gallery-switch-item--1" for="product-1">Первый</label>
+                <label class="gallery-switch-item gallery-switch-item--2" for="product-2">ВторойS</label>
               </div>
-              <figure class="gallery-content gallery-content-secondimg">
-                <a href="#">
-                  <img src="img/handdrill.jpg" alt="Человек с шуруповертом">
-                </a>
-              </figure>
-              <figure class="visually-hidden gallery-content gallery-content-firstimg">
-                <a href="#">
-                  <img src="img/perforator.jpg" alt="Человек с перфоратором">
-                </a>
-              </figure>
-              <div class="slider-switch">
-                <input class="slider-input-radio slider-input-previous" type="radio" name="type" value="previous" id="slider-previous" checked>
-                <input class="slider-input-radio slider-input-next" type="radio" name="type" value="next" id="slider-next">
-              </div>
-              <a class="button" href="inner.html">Открыть каталог</a>
-            </section>
+              <ul class="gallery-list">
+                <li class="gallery-item">
+                  <div class="gallery-label">
+                    <h3>Дрели</h3>
+                    <p>Соседям на радость!</p>
+                  </div>
+                  <figure class="gallery-content gallery-content-firstimg">
+                    <img src="img/handdrill.jpg" alt="Человек с шуруповертом">
+                  </figure>
+                  <a class="button" href="inner.html">Открыть каталог</a>
+                </li>
+                <li class="gallery-item">
+                  <div class="gallery-label">
+                    <h3>Перфораторы</h3>
+                    <p>Настоящие мужские игрушки</p>
+                  </div>
+                  <figure class="gallery-content gallery-content-secondimg">
+                    <img src="img/perforator.jpg" alt="Человек с перфоратором">
+                  </figure>
+                  <a class="button" href="inner.html">Открыть каталог</a>
+                </li>
+              </ul>
+              
+            </div>
             <div class="bottom-main-top-bottom">
               <div class="discount">
                 <h3>Скидки 50%</h3>

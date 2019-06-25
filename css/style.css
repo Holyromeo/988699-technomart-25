@@ -20,8 +20,7 @@ img {
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden,
-input[type="search"].visually-hidden {
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -500,21 +499,24 @@ input[type="search"].visually-hidden {
 }
 
 .top-main-top div,
-.bottom-main-top div {
+.bottom-main-top-bottom div {
   position: relative;
   width: 300px;
   min-height: 125px;
 }
 
-.main-top h3,
-.bottom-main-top h3 {
+.materials h3,
+.tools h3,
+.equipment h3,
+.discount h3,
+.delivery h3 {
   position: absolute;
   top: -5px;
   left: 33px;
 }
 
 .top-main-top div .button,
-.bottom-main-top div .button {
+.bottom-main-top-bottom div .button {
   padding: 0;
   margin: 0;
   border: none;
@@ -657,21 +659,84 @@ input[type="search"].visually-hidden {
 
 .gallery {
   position: relative;
+  width: 620px;
+}
+
+.gallery-switch {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  z-index: 100;
+  
+  width: 160px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.gallery-switch label {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.gallery-switch label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.gallery-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-item {
+  display: none;
+}
+
+#product-1:checked ~ .gallery-list .gallery-item:nth-child(1) {
+  display: block;
+}
+
+#product-2:checked ~ .gallery-list .gallery-item:nth-child(2) {
+  display: block;
+}
+
+#product-1:checked ~ .gallery-switch .gallery-switch-item--1::before,
+#product-2:checked ~ .gallery-switch .gallery-switch-item--2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 6px;
+  height: 6px;
+  margin: -3px;
+  background-color: #ee3643;
+  border-radius: 50%;
 }
 
 .gallery-content {
   margin: 0;
   margin-top: 20px;
   width: 620px;
-  min-height: 270px;
+  height: 270px;
 }
-
-.gallery .slider-switch {
-  display: flex;
-  position: absolute;
-  bottom: 40px;
-  left: 46%;
-} 
 
 .gallery .button {
   display: inline-block;
@@ -711,7 +776,7 @@ input[type="search"].visually-hidden {
   position: absolute;
 }
 
-.gallery-label p:nth-child(1) {
+.gallery-label h3 {
   font-size: 36px;
   line-height: 36px;
   margin: 0;
@@ -722,7 +787,7 @@ input[type="search"].visually-hidden {
   text-transform: uppercase;
 }
 
-.gallery-label p:nth-child(2) {
+.gallery-label p {
   font-size: 18px;
   line-height: 24px;
   margin: 0;
@@ -886,6 +951,7 @@ input[type="search"].visually-hidden {
   width: 280px;
 }
 
+
 /* майн низ */
 
 
@@ -931,7 +997,6 @@ input[type="search"].visually-hidden {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  /* outline: 5px dotted red; */
 }
 
 .main-content .container {
@@ -1076,11 +1141,8 @@ input[type="search"].visually-hidden {
 /*фильтр*/
 
 
-.filter-form li {
-  list-style: none;
-}
-
 .filters h2 {
+  font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1088,6 +1150,10 @@ input[type="search"].visually-hidden {
   padding: 14px 18px;  
   border-radius: 3px;
   background-color: #f7f3ec;
+}
+
+.filter-form li {
+  list-style: none;
 }
 
 .filters fieldset {
@@ -1191,6 +1257,44 @@ input[type="search"].visually-hidden {
   border: 1px solid #e5e5e5;
 }
 
+.sorting {
+  display: flex;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 14px 0;  
+  border-radius: 3px;
+  background-color: #f7f3ec;
+}
+
+.sorting p {
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  margin-left: 19px;
+}
+
+.sorting .button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: #ee3643;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sorting .button:nth-child(2) {
+  margin-left: 140px;
+}
+
+.sorting .button:nth-child(3),
+.sorting .button:nth-child(4) {
+  margin-left: 67px;
+  opacity: 0.3;
+  border-bottom: 1px dotted;
+}
 
 /*карточки товаров*/
 
@@ -1583,7 +1687,7 @@ input[type="search"].visually-hidden {
 }
 
 .modal-login {
-  /* display: none; */
+  display: none;
   top: 100px;
   left: 50%;
   width: 620px;
