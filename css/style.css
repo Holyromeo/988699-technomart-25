@@ -146,7 +146,7 @@ input[type="radio"].visually-hidden {
   background-color: #ee3643;
 }
 
-.make-order input::before,
+.make-order p:nth-child(1) input::before,
 .make-order a::before {
   content: "";
   position: absolute;
@@ -202,6 +202,12 @@ input[type="radio"].visually-hidden {
 .make-order-button a:active {
   background-color: #518534;
   opacity: 0.5;
+}
+
+.make-order input:hover,
+.make-order input:focus {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 
