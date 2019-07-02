@@ -1673,6 +1673,10 @@ input::placeholder {opacity: 1;}
   cursor: pointer;
 }
 
+.filter-option label:hover {
+  opacity: 1;
+}
+
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -1702,8 +1706,8 @@ input::placeholder {opacity: 1;}
   position: absolute;
   left: -35px;
   top: -1px;
-  width: 24px;
-  height: 24px;  
+  width: 25px;
+  height: 25px;  
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1714,8 +1718,8 @@ input::placeholder {opacity: 1;}
   position: absolute;
   left: -35px;
   top: -1px;
-  width: 24px;
-  height: 24px;  
+  width: 25px;
+  height: 25px;  
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1753,7 +1757,8 @@ input::placeholder {opacity: 1;}
   margin-left: 19px;
 }
 
-.sorting .button {
+.sorting .button,
+.sorting .button-dir {
   padding: 0;
   border: none;
   font: inherit;
@@ -1762,15 +1767,29 @@ input::placeholder {opacity: 1;}
   cursor: pointer;
 }
 
+.sorting .button:nth-child(2),
+.sorting .button:nth-child(3),
+.sorting .button:nth-child(4) {
+  opacity: 0.3;
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sorting .button:hover,
+.sorting .button:focus {
+  color: #000000;
+  opacity: 1;
+  border-bottom: 1px solid #ee3643;
+}
+
 .sorting .button:nth-child(2) {
   margin-left: 140px;
+  opacity: 1;
+  border-bottom: 1px dotted #f7f3ec;;
 }
 
 .sorting .button:nth-child(3),
 .sorting .button:nth-child(4) {
   margin-left: 70px;
-  opacity: 0.3;
-  border-bottom: 1px dotted;
 }
 
 .sorting .button:nth-child(4) {
@@ -1784,6 +1803,11 @@ input::placeholder {opacity: 1;}
   right: 48px;
   width: 11px;
   height: 10px;
+}
+
+.sorting button:hover path,
+.sorting button:focus path {
+  fill: #ee3643;
 }
 
 .sorting .button-back {
@@ -2080,9 +2104,19 @@ input::placeholder {opacity: 1;}
 .pagination-item a {
   display: block;
   padding: 9px 14px 9px 15px;
+  color: #000000;
   border: 1px solid #e5e5e5;
   background-color: #ffffff;
   border-radius: 3px;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  border-color: #bdc6ca;
+}
+
+.pagination-item a:active {
+  border-color: #ee3643;
 }
 
 .pagination-item-current a {
