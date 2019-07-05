@@ -1,3 +1,28 @@
+var items = document.getElementsByClassName("buy");
+var popupCart = document.querySelector(".modal-cart");
+var closeCart = popupCart.querySelector(".modal-close");
+
+for (var i = 0; i < items.length; i++) {
+	items[i].addEventListener("click", function(evt) {
+		evt.preventDefault();
+        popupCart.classList.add("modal-show");
+	});
+}
+
+closeCart.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popupCart.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (popupCart.classList.contains("modal-show")) {
+      evt.preventDefault();
+      popupCart.classList.remove("modal-show");
+    }
+  }
+});
+
 var write = document.querySelector(".button-write-us");
 var popup = document.querySelector(".modal-write-us");
 var close = popup.querySelector(".modal-close");
@@ -5,6 +30,7 @@ var name = popup.querySelector(".write-us-name");
 var form = popup.querySelector(".write-us-form");
 var mail = popup.querySelector(".write-us-mail");
 var letter = popup.querySelector(".write-us-letter");
+
 
 
 var isStorageSupport = true;
@@ -83,28 +109,6 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-var buyNow = document.querySelector(".buy");
-var cartPopup = document.querySelector(".modal-cart");
-var cartClose = mapPopup.querySelector(".modal-close");
 
-
-buyNow.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartPopup.classList.add("modal-show");
-});
-
-cartClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartPopup.classList.remove("modal-show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (cartPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      cartPopup.classList.remove("modal-show");
-    }
-  }
-});
 
 
