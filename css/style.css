@@ -109,13 +109,13 @@ input[type="radio"].visually-hidden {
 
 .main-header-catalog .main-header-logo:hover,
 .main-header-catalog .main-header-logo:focus,
-.main-footer-logo:hover,
-.main-footer-logo:focus {
+.catalog-page .main-footer-logo:hover,
+.catalog-page .main-footer-logo:focus {
   background-color: #ca2c37;
 }
 
 .main-header-catalog .main-header-logo:active,
-.main-footer-logo:active {
+.catalog-page .main-footer-logo:active {
   background-color: #ba2732;
 }
 
